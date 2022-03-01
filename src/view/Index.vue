@@ -3,7 +3,7 @@
   <div class="header border-line">122222223</div>
   <div>
     <div class="aside">
-      <div class="left-side border-line content-height">left</div>
+      <div class="left-side border-line content-height"><WxMenu /></div>
     </div>
     <div class="right">
       <div class="center-content content-height  border-line">center</div>
@@ -15,8 +15,11 @@
  
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+import WxMenu from "../components/menu/index.vue";
 export default defineComponent({
+  components: {
+    WxMenu
+  },
   setup() {
     
   },
