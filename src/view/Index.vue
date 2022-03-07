@@ -2,6 +2,7 @@
 <div class="common-layout">
   <el-container>
     <el-aside :width="asideWidth">
+      <div class="ico-style">logo</div>
       <x-menu :is-collapse="isCollapse" />
     </el-aside>
     <el-container>
@@ -39,7 +40,7 @@ export default defineComponent({
     const onSwitchMenu = () => {
       isCollapse.value = !isCollapse.value;
     }
-    const asideWidth = computed(() => isCollapse.value ? 56: 120);
+    const asideWidth = computed(() => isCollapse.value ? "56": "120");
     return {
       isCollapse,
       onSwitchMenu,
@@ -62,7 +63,7 @@ header > div.el-row {
 }
 
 .common-layout .el-aside {
-  background-color: #d3dce6;
+  background-color: #545c64;
   color: var(--el-text-color-primary);
   text-align: center;
   height: 100vh;
@@ -77,5 +78,11 @@ header > div.el-row {
 .common-layout > .el-container {
   margin-bottom: 40px;
 }
-
+.ico-style {
+  background-repeat: no-repeat;
+  background-image: url("../assets/favicon.ico");
+  line-height: 60px;
+  text-align: center;
+  background-position: center;
+}
 </style>
