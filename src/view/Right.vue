@@ -1,6 +1,4 @@
 <template>
-
-
   <el-menu
     default-active="2"
     class="el-menu-vertical-demo"
@@ -11,7 +9,7 @@
     @open="handleOpen"
     @close="handleClose"
   >
-  <menu-item v-for="item in menutItems" :key="item.key" :dataItem="item"/>
+  <menu-item v-for="item in menuItems" :key="item.key" :dataItem="item"/>
   </el-menu>
 </template>
 
@@ -23,7 +21,7 @@ import {
   Menu as IconMenu,
   Setting,
 } from '@element-plus/icons-vue'
-import { menutItems } from "../common/vars/menu"
+import { menuItems } from "../common/vars/menu"
 import MenuItem from "../components/MenuItem.vue";
 export default defineComponent({
   props: {
@@ -49,7 +47,7 @@ export default defineComponent({
     return {
       handleOpen,
       handleClose,
-      menutItems,
+      menuItems,
     }
   }
 })
