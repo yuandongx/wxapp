@@ -3,11 +3,12 @@
     default-active="2"
     class="el-menu-vertical-demo"
     :collapse="isCollapse"
-    background-color="#545c64"
-    text-color="#fff"
     active-text-color="#ffd04b"
     @open="handleOpen"
+    mode="horizontal"
     @close="handleClose"
+    text-color="#0000CD"
+    background-color="#2F4F4F"
   >
   <menu-item v-for="item in menuItems" :key="item.key" :dataItem="item"/>
   </el-menu>
@@ -55,7 +56,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-}
+
 </style>
