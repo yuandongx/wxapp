@@ -87,7 +87,7 @@ export const menuItems: Array<MenutItem> = [
     {
         path: "/log",
         key: "log",
-        name: "操作日志",
+        name: "日志中心",
         component: "2323"
     },
     {
